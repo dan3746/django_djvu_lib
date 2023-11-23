@@ -62,7 +62,7 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
 
 class UserPostListView(ListView):
     model = Post
-    template_name = 'blog/user_posts.html'  # <app>/<model>_<viewtype>.html
+    template_name = 'blog/user_posts.html'
     context_object_name = 'posts'
     paginate_by = 5
 

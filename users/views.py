@@ -1,7 +1,10 @@
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
+from django.views.generic import DetailView
+
 from .forms import UserRegisterForm, UserUpdateForm, ProfileUpdateForm
+from .models import Profile
 
 
 def register(request):
@@ -29,7 +32,6 @@ def profile(request):
             p_form.save()
             messages.success(request, f'Ваш профиль успешно обновлен.')
             return redirect('profile')
-
     else:
         u_form = UserUpdateForm(instance=request.user)
         p_form = ProfileUpdateForm(instance=request.user.profile)
@@ -38,5 +40,9 @@ def profile(request):
         'u_form': u_form,
         'p_form': p_form
     }
-
     return render(request, 'users/profile.html', context)
+
+
+class UserPageGuest(DetailView):
+    model = Profile
+

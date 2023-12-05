@@ -23,15 +23,15 @@
     <header class="site-header">
       <nav class="navbar navbar-expand-md navbar-dark bg-blue fixed-top">
         <div class="container">
-          <a class="navbar-brand mr-4" href="{% url 'blog-home' %}"><i class='bx bxs-rocket bx-tada-hover'></i> Python Bytes</a>
+          <a class="navbar-brand mr-4" href="{% url 'main_page' %}"><i class='bx bxs-rocket bx-tada-hover'></i> Python Bytes</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarToggle">
             <div class="navbar-nav mr-auto">
-              <a class="nav-item nav-link " href="{% url 'blog-home' %}">Главная</a>
-              <a class="nav-item nav-link" href="{% url 'blog-about' %}">О клубе</a>
+              <a class="nav-item nav-link " href="{% url 'blog-home' %}">Блог</a>
               <a class="nav-item nav-link" href="{% url 'library-home' %}">Библиотека</a>
+              <a class="nav-item nav-link" href="{% url 'blog-about' %}">О клубе</a>
             </div>
             <!-- Правая часть навигационной панели -->
             <div class="navbar-nav">

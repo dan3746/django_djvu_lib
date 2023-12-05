@@ -73,3 +73,7 @@ class UserPostListView(ListView):
 
 def about(request):
     return render(request, 'blog/about.html', {'title': 'О клубе Python Bites'})
+
+
+def main_page(request):
+    return render(request, 'blog/main_page.html')

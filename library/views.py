@@ -68,7 +68,7 @@ class UserBookListView(ListView):
 
     def get_queryset(self):
         user = get_object_or_404(User, username=self.kwargs.get('username'))
-        return Book.objects.filter(author=user).order_by('-date_posted')
+        return Book.objects.filter(book_author=user).order_by('-date_posted')
 
 
 def about(request):

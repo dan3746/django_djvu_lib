@@ -14,16 +14,16 @@
      <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
 
     {% if title %}
-        <title>Блог клуба {{ title }}</title>
+        <title>{{ title }}</title>
     {% else %}
-        <title>Блог клуба Python Bytes</title>
+        <title>Библиотека Horwing Logistics</title>
     {% endif %}
 </head>
 <body>
     <header class="site-header">
       <nav class="navbar navbar-expand-md navbar-dark bg-blue fixed-top">
         <div class="container">
-          <a class="navbar-brand mr-4" href="{% url 'main_page' %}"><i class='bx bxs-rocket bx-tada-hover'></i> Python Bytes</a>
+          <a class="navbar-brand mr-4" href="{% url 'main_page' %}"><i class='bx bxs-rocket bx-tada-hover'></i> Библиотека Horwing Logistics</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
           </button>
@@ -31,7 +31,7 @@
             <div class="navbar-nav mr-auto">
               <a class="nav-item nav-link " href="{% url 'blog-home' %}">Блог</a>
               <a class="nav-item nav-link" href="{% url 'library-home' %}">Библиотека</a>
-              <a class="nav-item nav-link" href="{% url 'blog-about' %}">О клубе</a>
+              <a class="nav-item nav-link" href="{% url 'blog-about' %}">О библиотеке</a>
             </div>
             <!-- Правая часть навигационной панели -->
             <div class="navbar-nav">
@@ -60,25 +60,12 @@
         {% endif %}
           {% block content %}{% endblock %}
         </div>
-        <div class="col-md-4">
-          <div class="content-section">
-            <h3>Разделы</h3>
-            <p class='text-muted'>новости и события
-              <ul class="list-group">
-                <li class="list-group-item list-group-item-light">Новые записи</li>
-                <li class="list-group-item list-group-item-light">Объявления</li>
-                <li class="list-group-item list-group-item-light">Соревнования</li>
-                <li class="list-group-item list-group-item-light">Встречи участников</li>
-              </ul>
-            </p>
-          </div>
-        </div>
       </div>
 
     </main>
     <!-- Футер закреплен внизу, независимо от количества постов на странице -->
     <footer class="text-center bg-dark">
-      <p><a href="{% url 'blog-home' %}">© Клуб Python Bytes 2022</a></p>
+      <p><a href="{% url 'blog-home' %}">© Библиотека Horwing Logistics 2024</a></p>
     </footer>
 
     <!-- Дополнительные скрипты JavaScript -->

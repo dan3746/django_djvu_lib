@@ -72,4 +72,4 @@ class UserBookListView(ListView):
 
 
 def about(request):
-    return render(request, 'library/about.html', {'title': 'О клубе Python Bites'})
+    return render(request, 'library/about.html', {'title': 'О библиотеке Horwing Logistics'})

@@ -2,7 +2,7 @@
 {% block content %}
     {% for book in books %}
         <article class="media content-section">
-          <img class="rounded-circle article-img" src="{{ book.author.profile.image.url }}">
+          <img class="rounded-circle article-img" src="{{ book.posted_by.profile.image.url }}">
           <div class="media-body">
             <div class="article-metadata">
               <a class="mr-2" href="{% url 'profile-info' book.posted_by.id %}">{{ book.posted_by }}</a>

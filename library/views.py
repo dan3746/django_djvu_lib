@@ -44,18 +44,18 @@ class BookUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
 
     def test_func(self):
         book = self.get_object()
-        if self.request.user == book.author:
+        if self.request.user == book.posted_by:
             return True
         return False
 
 
 class BookDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     model = Book
-    success_url = '/'
+    success_url = '/library'
 
     def test_func(self):
         book = self.get_object()
-        if self.request.user == book.author:
+        if self.request.user == book.posted_by:
             return True
         return False
 
